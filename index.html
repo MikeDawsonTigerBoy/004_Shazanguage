@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sawubona · I can still say hello</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div id="status-banner" class="banner hidden"></div>
+
+  <main id="app">
+    <!-- Idle / listening screen -->
+    <section id="screen-listen" class="screen">
+      <header class="hero">
+        <p class="eyebrow">Sawubona</p>
+        <h1 class="tagline">I don't speak your language,<br/>but I can still say hello.</h1>
+      </header>
+
+      <div class="orb-wrap">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div id="progress" class="progress"></div>
+        <button id="listen-btn" class="orb" aria-label="Tap to listen">
+          <svg class="mic" viewBox="0 0 24 24" width="56" height="56" aria-hidden="true">
+            <path fill="currentColor" d="M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4Zm6-4a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.93V22h2v-3.07A8 8 0 0 0 20 11h-2Z"/>
+          </svg>
+          <span id="orb-label" class="orb-label">Tap to listen</span>
+        </button>
+      </div>
+
+      <div id="meter" class="meter" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <p id="hint" class="hint">Hold the phone near someone speaking. I'll listen for five seconds.</p>
+
+      <button id="browse-btn" class="link">Browse all languages</button>
+    </section>
+
+    <!-- Result screen -->
+    <section id="screen-result" class="screen hidden">
+      <button id="back-btn" class="back" aria-label="Listen again">‹ Listen again</button>
+
+      <div id="result-card" class="result-card">
+        <p class="eyebrow" id="result-eyebrow">You're hearing</p>
+        <div class="lang-row">
+          <span id="result-flag" class="flag"></span>
+          <div>
+            <h2 id="result-name" class="lang-name"></h2>
+            <p id="result-english" class="lang-english"></p>
+          </div>
+        </div>
+        <p id="result-region" class="lang-region"></p>
+        <div id="confidence" class="confidence"></div>
+        <p id="alternatives" class="alternatives"></p>
+      </div>
+
+      <p id="about" class="about"></p>
+
+      <div id="sound-tip" class="tip-box hidden"></div>
+
+      <h3 class="section-title">Say hello</h3>
+      <ol id="phrases" class="phrases"></ol>
+
+      <button id="again-btn" class="primary">Listen again</button>
+    </section>
+
+    <!-- Browse screen -->
+    <section id="screen-browse" class="screen hidden">
+      <button id="browse-back-btn" class="back" aria-label="Back">‹ Back</button>
+      <h2 class="section-title big">Languages</h2>
+      <p class="hint left">Tap any language to open its phrasebook.</p>
+      <div id="browse-list"></div>
+    </section>
+  </main>
+
+  <template id="phrase-tpl">
+    <li class="phrase">
+      <div class="phrase-en"></div>
+      <div class="phrase-text"></div>
+      <div class="phrase-roman"></div>
+      <div class="phrase-say"></div>
+      <div class="phrase-tip"></div>
+      <button class="speak" title="Play with your device's voice" aria-label="Play">🔊</button>
+    </li>
+  </template>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
