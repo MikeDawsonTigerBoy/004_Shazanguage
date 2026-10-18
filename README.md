@@ -6,6 +6,8 @@ Shazam for languages. Tap to listen to someone speaking, find out which language
 
 ## Status
 
+- **Focus: active.** This is one of three featured prototypes, alongside 001 and 002.
+
 There is a working prototype, called "Sawubona", in `index.html`, `app.js` and `styles.css`:
 - It records 5 seconds of audio and sends it to a local server, which identifies the language.
 - It then shows a greeting and a phrasebook for that language.
@@ -69,7 +71,7 @@ Go from "what language is that?" to saying hello in it, in about 10 seconds.
 
 ## 10. Open questions and challenges
 
-1. **Mike to confirm:** are the problem and audience above right? What's the origin story?
+1. **Mike to confirm:** are the problem and audience above right? What's the origin story? Sections 1–3 were inferred from the prototype code in this repo.
 2. **What changes in the new version?** Is it a phone app, a different model or a new focus?
 3. **Is it about learning or about respect?** If it's respect, the phrasebook and pronunciation matter more than identification.
    - People could pick the language themselves, which would make the 3.8 GB model unnecessary.
